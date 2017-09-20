@@ -1,0 +1,27 @@
+/* lines 323 */
+.cs-pxabnsnfns10111000001 .cs-seekcontrol {
+    background: linear-gradient(180deg, rgba(245, 245, 245, 1) 0%, rgba(199, 199, 199, 1) 100%);
+    border-color: rgba(177, 177, 177, 1);
+}
+
+.cs-pxabnsnfns10111000001 .cs-seekcontrol .cs-button:hover .cs-icon {
+    fill: rgba(85, 85, 85, 1);
+}
+
+.cs-pxabnsnfns10111000001 .cs-seekcontrol .cs-button .cs-icon-shadow {
+    fill: rgba(240, 240, 240, 1);
+}
+
+.cs-pxabnsnfns10111000001 .cs-seekcontrol .cs-button .cs-icon {
+    fill: rgba(45, 45, 45, 1);
+}
+
+.cs-pxabnsnfns10111000001 .cs-seekcontrol .cs-seek .cs-fill {
+    background: rgba(65, 65, 65, 1);
+}
+
+.cs-pxabnsnfns10111000001 .cs-seekcontrol .cs-seek {
+    background: rgba(231, 231, 231, 1);
+    border-color: rgba(184, 184, 184, 1);
+    width: 65px;
+}
