@@ -93,5 +93,5 @@ function enlargeScreen(){
 	  elem.mozRequestFullScreen();
 	} else if (elem.webkitRequestFullscreen) {
 	  elem.webkitRequestFullscreen();
-	}
+	} 
 }
