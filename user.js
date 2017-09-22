@@ -13,7 +13,7 @@ var	toggle = true,
 	checkCurrentStatusInterval;
 
 // this function feeds this variables
-// this function is only called once
+// this function is called one second after function has been called
 function init(){
 	//giving IDs to email elements
 	emailButtonNode.id = 'emailIcon';
@@ -35,7 +35,7 @@ function init(){
 		controlNode.appendChild(enlargeButtonNode);
 		controlNode.appendChild(progressBarObject);
 	}
-	//clear init interval 
+	//clears init interval 
 	if(controlNode) clearInterval(initInterval);
 	//sets check current status interval
 	checkCurrentStatusInterval = setInterval(checkCurrentStatus, 10);
@@ -58,7 +58,7 @@ function checkCurrentStatus(){
 	}
 }
 
-// this function returns a subtitle element from the DOM
+// this function returns the subtitle element from the DOM
 // selecting the element by its height
 function retrieveSubtitles(collection){
 	if(collection.length !== 0){
@@ -72,7 +72,7 @@ function retrieveSubtitles(collection){
 toggle = false;
 };
 
-// callback function that toggles element visibility
+// callback function that toggles subtitles visibility
 function subTitlesSwitch(e){
 	toggle = !toggle;
 	if (subTitlesObjectNode.style !== undefined) {
@@ -80,7 +80,7 @@ function subTitlesSwitch(e){
 	}
 }
 
-// callback function which enlarges screen
+// callback function that enlarges screen
 function enlargeScreen(){
 	// select the slider DOM element
 	var elem = document.getElementById("presentation-container");
