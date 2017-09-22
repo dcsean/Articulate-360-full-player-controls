@@ -20,7 +20,7 @@ function init(){
 	slideNumberNode.id = 'slideNumber';
 	enlargeButtonNode.id = 'enlargeIcon';
 	progressBarObject.id = 'courseProgressBar'
-	//adding properties to the A tag
+	//adding properties to the href tag
 	emailButtonNode.href = 'mailto:'+mailto+'?subject='+emailsubject+'&body='+emailbody;
 	//if this element on the player exist initialize controlNode variable
 	if (document.getElementsByClassName("controls-group control-bar cs-seekcontrol progress-control")[0]){
@@ -33,7 +33,6 @@ function init(){
 		controlNode.appendChild(slideNumberNode);
 		controlNode.appendChild(enlargeButtonNode);
 		controlNode.appendChild(progressBarObject);
-		
 	}
 	//clear init interval
 	if(controlNode) clearInterval(initInterval);
@@ -58,8 +57,7 @@ function checkCurrentStatus(){
 	}
 }
 
-// this element gets the subtitle element in the DOM
-// makes toggle go false to hide subtitles element in the DOm
+// this variable casts the subtitle element in the DOM
 function retrieveSubtitles(collection){
 	if(collection.length !== 0){
 		for(var elem in collection){
@@ -72,7 +70,8 @@ function retrieveSubtitles(collection){
 toggle = false;
 };
 
-// subtitle listener callback function, which works as a toggle.
+// subtitle listener callback function, which works as a toggle
+// makes subtitle div to toggle visibility in the DOM
 function subTitlesSwitch(e){
 	toggle = !toggle;
 	if (subTitlesObjectNode.style !== undefined) {
@@ -81,7 +80,7 @@ function subTitlesSwitch(e){
 }
 
 // callback from the enlarge button listener
-// this function enlarges screen
+// this function adds functionality to the enlarge button
 function enlargeScreen(){
 	//var elem = document.body;
 	var elem = document.getElementById("presentation-container");	
