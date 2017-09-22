@@ -12,7 +12,8 @@ var	toggle = true,
 	initInterval = setInterval(init, 1000),
 	checkCurrentStatusInterval;
 
-// initializes variables when user.js is called for first time
+// this function feeds this variables
+// this function is only called once
 function init(){
 	//giving IDs to email elements
 	emailButtonNode.id = 'emailIcon';
@@ -43,8 +44,8 @@ function init(){
 	subtitlesButtonNode.addEventListener('click', subTitlesSwitch);
 }
 
-// callback from an event listener to check on the toggle variable
-// fills the subTitle object with the subtitles DOM element
+// callback function checks if subtitles element is visible
+// when a slide changes 
 function checkCurrentStatus(){
 	if(toggle !== null){
 		arrFromList = Array.prototype.slice.call(document.getElementsByClassName("slide-object slide-object-objgroup shown"));
@@ -57,7 +58,8 @@ function checkCurrentStatus(){
 	}
 }
 
-// this variable casts the subtitle element in the DOM
+// this function returns a subtitle element from the DOM
+// selecting the element by its height
 function retrieveSubtitles(collection){
 	if(collection.length !== 0){
 		for(var elem in collection){
@@ -70,8 +72,7 @@ function retrieveSubtitles(collection){
 toggle = false;
 };
 
-// subtitle listener callback function, which works as a toggle
-// makes subtitle div to toggle visibility in the DOM
+// callback function that toggles element visibility
 function subTitlesSwitch(e){
 	toggle = !toggle;
 	if (subTitlesObjectNode.style !== undefined) {
@@ -79,11 +80,11 @@ function subTitlesSwitch(e){
 	}
 }
 
-// callback from the enlarge button listener
-// this function adds functionality to the enlarge button
+// callback function which enlarges screen
 function enlargeScreen(){
-	//var elem = document.body;
-	var elem = document.getElementById("presentation-container");	
+	// select the slider DOM element
+	var elem = document.getElementById("presentation-container");
+	//check existance of the element in different browsers
 	if (elem.requestFullscreen) {
 	  elem.requestFullscreen();
 	} else if (elem.msRequestFullscreen) {
