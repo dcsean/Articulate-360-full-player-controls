@@ -35,7 +35,7 @@ function init(){
 		controlNode.appendChild(enlargeButtonNode);
 		controlNode.appendChild(progressBarObject);
 	}
-	//clear init interval
+	//clear init interval 
 	if(controlNode) clearInterval(initInterval);
 	//sets check current status interval
 	checkCurrentStatusInterval = setInterval(checkCurrentStatus, 10);
