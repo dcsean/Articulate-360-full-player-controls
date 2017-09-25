@@ -15,19 +15,19 @@ var	toggle = true,
 // this function feeds this variables
 // this function is called one second after function has been called
 function init(){
-	//giving IDs to email elements
+	//giving ID names to DOM elements
 	emailButtonNode.id = 'emailIcon';
 	subtitlesButtonNode.id = 'subtitlesIcon';
 	slideNumberNode.id = 'slideNumber';
 	enlargeButtonNode.id = 'enlargeIcon';
 	progressBarObject.id = 'courseProgressBar'
-	//adding properties to the href tag
+	//adding properties to href tag
 	emailButtonNode.href = 'mailto:'+mailto+'?subject='+emailsubject+'&body='+emailbody;
-	//if this element on the player exist initialize controlNode variable
+	//if this element exists initialize controlNode variable
 	if (document.getElementsByClassName("controls-group control-bar cs-seekcontrol progress-control")[0]){
 		controlNode = document.getElementsByClassName("controls-group control-bar cs-seekcontrol progress-control")[0].childNodes[0];
 	} 
-	//if controlNode has been filled append these elements to the DOM
+	//if controlNode is declared then append these elements to the DOM
 	if(controlNode){
 		controlNode.appendChild(subtitlesButtonNode);
 		controlNode.appendChild(emailButtonNode);
